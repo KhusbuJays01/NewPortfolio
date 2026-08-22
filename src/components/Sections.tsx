@@ -481,17 +481,34 @@ export function Contact() {
       setErrors((er) => ({ ...er, [key]: undefined }));
     };
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const er: { name?: string; email?: string; message?: string } = {};
-    if (!values.name.trim()) er.name = "error: name is required";
-    if (!/^\S+@\S+\.\S+$/.test(values.email)) er.email = "error: valid email required";
-    if (values.message.trim().length < 10) er.message = "error: tell me a bit more (10+ characters)";
-    setErrors(er);
-    if (Object.values(er).some(Boolean)) return;
-    setStatus("sending");
-    window.setTimeout(() => setStatus("sent"), 900);
-  };
+  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  setStatus("sending");
+
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("https://formspree.io/f/xojb1odk", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setStatus("sent");
+      form.reset();
+    } else {
+      setStatus("error");
+    }
+  } catch (error) {
+    console.error(error);
+    setStatus("error");
+  }
+};
 
   const reset = () => {
     setValues({ name: "", email: "", message: "" });
@@ -638,71 +655,44 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={submit} noValidate className="space-y-5 p-5 md:p-6">
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="cf-name" className={labelCls}>
-                      <span className="text-acid">&gt;</span> name
-                    </label>
-                    <input
-                      id="cf-name"
-                      type="text"
-                      value={values.name}
-                      onChange={set("name")}
-                      placeholder="Ada Lovelace"
-                      className={`${inputCls} ${errors.name ? "border-[#ff9c9c]/60" : ""}`}
-                      autoComplete="name"
-                    />
-                    {errors.name && <span className={errCls}>{errors.name}</span>}
-                  </div>
-                  <div>
-                    <label htmlFor="cf-email" className={labelCls}>
-                      <span className="text-acid">&gt;</span> email
-                    </label>
-                    <input
-                      id="cf-email"
-                      type="email"
-                      value={values.email}
-                      onChange={set("email")}
-                      placeholder="ada@company.com"
-                      className={`${inputCls} ${errors.email ? "border-[#ff9c9c]/60" : ""}`}
-                      autoComplete="email"
-                    />
-                    {errors.email && <span className={errCls}>{errors.email}</span>}
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="cf-msg" className={labelCls}>
-                    <span className="text-acid">&gt;</span> message
-                  </label>
-                  <textarea
-                    id="cf-msg"
-                    rows={5}
-                    value={values.message}
-                    onChange={set("message")}
-                    placeholder="Tell me about your project, timeline, and the team you're building…"
-                    className={`${inputCls} resize-none ${errors.message ? "border-[#ff9c9c]/60" : ""}`}
-                  />
-                  {errors.message && <span className={errCls}>{errors.message}</span>}
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <button
-                    type="submit"
-                    disabled={status === "sending"}
-                    className="inline-flex items-center gap-2 bg-acid px-6 py-3 font-mono text-sm font-medium text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(93,240,138,0.45)] disabled:cursor-wait disabled:opacity-60 disabled:hover:translate-y-0"
-                  >
-                    {status === "sending" ? (
-                      <>
-                        sending<span className="animate-pulse">…</span>
-                      </>
-                    ) : (
-                      <>
-                        send message <span aria-hidden="true">→</span>
-                      </>
-                    )}
-                  </button>
-                  <span className="font-mono text-[10px] text-fog/70">// replies within 24h, usually faster</span>
-                </div>
-              </form>
+
+  <input
+    id="cf-name"
+    name="name"
+    type="text"
+    value={values.name}
+    onChange={set("name")}
+    placeholder="Ada Lovelace"
+    className={inputCls}
+    autoComplete="name"
+  />
+
+  <input
+    id="cf-email"
+    name="email"
+    type="email"
+    value={values.email}
+    onChange={set("email")}
+    placeholder="ada@company.com"
+    className={inputCls}
+    autoComplete="email"
+  />
+
+  <textarea
+    id="cf-msg"
+    name="message"
+    rows={5}
+    value={values.message}
+    onChange={set("message")}
+    placeholder="Tell me about your project..."
+    className={`${inputCls} resize-none`}
+  />
+
+  <button type="submit">
+    Send Message →
+  </button>
+
+</form>
             )}
           </div>
         </Reveal>
