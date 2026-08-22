@@ -207,7 +207,7 @@ export const skillGroups: SkillGroup[] = [
 
 export const education = {
   degree: "BSc (Hons) — Computer Science & Software Engineering",
-  school: "Hattar College, Rawalpindi",
+  school: "Patan College For Professional Studies, Kupondole Lalitpur",
   dates: "Jan 2017 — Jun 2020",
   courses: ["Web Development", "Operating Systems", "Data Structures", "Software Engineering"],
   gpa: "3.1 / 3.5 GPA",
