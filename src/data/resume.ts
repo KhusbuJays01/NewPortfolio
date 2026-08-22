@@ -44,7 +44,7 @@ export const experience: Job[] = [
     role: "Team Lead",
     company: "SmartAcre Media Solutions",
     dates: "Dec 2023 — Present",
-    location: "Bhaktapur, Nepal",
+    location: "Imadole(Lalitpur), Nepal",
     promoted: true,
     points: [
       "Lead a team of 8–15 developers, responsible for sprint planning, code reviews, assigning work to junior developers and coordinating with the business.",
@@ -56,10 +56,10 @@ export const experience: Job[] = [
     ],
   },
   {
-    role: "Sr. Software Developer",
+    role: "Jr. Software Developer and Sr. Software Developer",
     company: "SmartAcre Media Solutions",
     dates: "2020 — Dec 2023",
-    location: "Bhaktapur, Nepal",
+    location: "Imadole(Lalitpur), Nepal",
     points: [
       "Designed and developed responsive web applications using HTML, CSS, JavaScript and AngularJS, working closely with designers and fellow developers.",
       "Worked with jQuery, GitLab and Git to manage code versioning and streamline team collaboration.",
