@@ -42,7 +42,7 @@ export interface Job {
 export const experience: Job[] = [
   {
     role: "Team Lead",
-    company: "Sankran Solutions",
+    company: "SmartAcre Media Solutions",
     dates: "Dec 2023 — Present",
     location: "Bhaktapur, Nepal",
     promoted: true,
@@ -57,7 +57,7 @@ export const experience: Job[] = [
   },
   {
     role: "Sr. Software Developer",
-    company: "Sankran Web Solutions",
+    company: "SmartAcre Media Solutions",
     dates: "2020 — Dec 2023",
     location: "Bhaktapur, Nepal",
     points: [
