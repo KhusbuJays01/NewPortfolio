@@ -210,7 +210,7 @@ export const previousEducation = {
   school: "Nightingle",
   dates: "2020 – 2021 ",
   location: "Kupandole,Lalitpur",
-  results: "11: 3.43 GPA | 12: 3.25 GPA",
+  gpa: "11: 3.43 | 12: 3.25 ",
 };
 
 export const education = {
@@ -250,12 +250,12 @@ export const certifications = [
   {
     name: "Oracle Database Platform",
     issuer: "Oracle",
-    color: "fog",
+    color: "amber",
   },
   {
     name: "UI/UX Design",
     issuer: "Google",
-    color: "fog",
+    color: "amber",
   },
 ];
 
