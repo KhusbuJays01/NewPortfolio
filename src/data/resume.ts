@@ -205,40 +205,140 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
-export const education = {
-  degree: "BSc (Hons) Computer Science & Software Engineering",
-  school: "University of Bedfordshire",
-  location: "Study location: PCPS College, Nepal",
-  dates: "Jan 2022 – Jan 2025",
-  courses: ["Web Development", "Operating Systems", "Data Structures", "Software Engineering"],
-  
-};
-export const previousEducation = {
-  degree: "+2 Management",
-  school: "Nightingale International College",
-  dates: "2020 — 2021",
-  results: "Class 11: 3.43 GPA | Class 12: 3.25 GPA",
-};
+/* ================= 05 — education + certifications + interests ================= */
+export function EducationCerts() {
+  const issuerColor: Record<string, string> = {
+    acid: "border-acid/50 bg-acid/10 text-acid",
+    amber: "border-amber/50 bg-amber/10 text-amber",
+    fog: "border-line bg-panel2 text-fog",
+  };
 
-export interface Certification {
-  name: string;
-  issuer: string;
-  color: "acid" | "amber" | "fog";
+  return (
+    <Shell id="education">
+      <SectionHead
+        index="05"
+        title="Education & Credentials"
+        sub="git blame: origins"
+      />
+
+      {/* ================= EDUCATION ================= */}
+      <div className="grid gap-5 lg:grid-cols-2">
+
+        {/* BSc */}
+        <Reveal className="h-full">
+          <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
+
+            <span className="mb-4 inline-flex w-fit border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
+              {education.dates}
+            </span>
+
+            <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">
+              {education.degree}
+            </h3>
+
+            <p className="mt-2 font-mono text-sm text-acid">
+              {education.school}
+            </p>
+
+            <p className="mt-2 font-mono text-xs text-fog">
+              {education.location}
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-1.5">
+              {education.courses.map((c) => (
+                <span
+                  key={c}
+                  className="border border-line px-2.5 py-1 font-mono text-[11px] text-fog"
+                >
+                  {c}
+                </span>
+              ))}
+            </div>
+
+          </div>
+        </Reveal>
+
+        {/* +2 Management */}
+        <Reveal delay={130} className="h-full">
+          <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
+
+            <span className="mb-4 inline-flex w-fit border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
+              {previousEducation.dates}
+            </span>
+
+            <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">
+              {previousEducation.degree}
+            </h3>
+
+            <p className="mt-2 font-mono text-sm text-acid">
+              {previousEducation.school}
+            </p>
+
+            <div className="mt-5 border border-acid/30 bg-acid/5 px-4 py-3 font-mono text-xs text-acid">
+              <span className="text-fog">results:</span>{" "}
+              {previousEducation.results}
+            </div>
+
+          </div>
+        </Reveal>
+
+      </div>
+
+      {/* ================= CERTIFICATIONS ================= */}
+      <Reveal delay={220}>
+        <div className="mt-5 border border-line bg-panel/60 p-6 md:p-7">
+
+          <h3 className="font-display text-lg font-bold uppercase tracking-wide">
+            Certifications
+          </h3>
+
+          <ul className="mt-4">
+            {certifications.map((c, i) => (
+              <li
+                key={c.name}
+                className={`flex items-center justify-between gap-4 py-3.5 transition-colors duration-200 hover:bg-ink/40 ${
+                  i > 0 ? "border-t border-line/70" : ""
+                }`}
+              >
+                <span className="text-[15px] text-snow/90">
+                  {c.name}
+                </span>
+
+                <span
+                  className={`shrink-0 border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${issuerColor[c.color]}`}
+                >
+                  {c.issuer}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+        </div>
+      </Reveal>
+
+      {/* ================= INTERESTS ================= */}
+      <Reveal delay={320}>
+        <div className="mt-5 flex flex-wrap items-center gap-3 border border-line bg-panel/40 px-5 py-4">
+
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-fog">
+            interests:
+          </span>
+
+          {interests.map((it) => (
+            <span
+              key={it}
+              className="border border-line px-3 py-1.5 font-mono text-xs text-fog transition-all duration-200 hover:-translate-y-0.5 hover:border-amber/60 hover:text-amber"
+            >
+              ✦ {it}
+            </span>
+          ))}
+
+        </div>
+      </Reveal>
+
+    </Shell>
+  );
 }
-
-export const certifications: Certification[] = [
-  { name: "Cisco CyberOps Associate", issuer: "Cisco", color: "amber" },
-  { name: "UI/UX Design & Usability Engineering", issuer: "Udemy", color: "fog" },
-  { name: "Google UX Design Certificate", issuer: "Google", color: "acid" },
-  { name: "Google Data Analytics Certificate", issuer: "Google", color: "acid" },
-];
-
-export const interests = [
-  "Technology & Innovation",
-  "UI/UX & Frontend Craft",
-  "Community Involvement",
-  "Customer Service Solutions",
-];
 
 export const techTicker = [
   "React.js",
