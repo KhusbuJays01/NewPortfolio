@@ -5,6 +5,7 @@ import {
   projects,
   skillGroups,
   education,
+  previousEducation,
   certifications,
   interests,
 } from "../data/resume";
@@ -393,27 +394,28 @@ export function EducationCerts() {
     <Shell id="education">
       <SectionHead index="05" title="Education & Credentials" sub="git blame: origins" />
       <div className="grid gap-5 lg:grid-cols-2">
-        <Reveal className="h-full">
-          <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
-            <span className="mb-4 inline-flex w-fit border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
-              {education.dates}
-            </span>
-            <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">{education.degree}</h3>
-            <p className="mt-2 font-mono text-sm text-acid">{education.school}</p>
-            <div className="mt-5 flex flex-wrap gap-1.5">
-              {education.courses.map((c) => (
-                <span key={c} className="border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
-                  {c}
-                </span>
-              ))}
-            </div>
-            <div className="mt-auto pt-6">
-              <div className="border border-acid/30 bg-acid/5 px-4 py-3 font-mono text-xs text-acid">
-                <span className="text-fog">gpa:</span> {education.gpa}
-              </div>
-            </div>
-          </div>
-        </Reveal>
+        <Reveal delay={100} className="h-full">
+  <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
+    
+    <span className="mb-4 inline-flex w-fit border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
+      {previousEducation.dates}
+    </span>
+
+    <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">
+      {previousEducation.degree}
+    </h3>
+
+    <p className="mt-2 font-mono text-sm text-acid">
+      {previousEducation.school}
+    </p>
+
+    <div className="mt-5 border border-acid/30 bg-acid/5 px-4 py-3 font-mono text-xs text-acid">
+      <span className="text-fog">results:</span>{" "}
+      {previousEducation.results}
+    </div>
+
+  </div>
+</Reveal>
 
         <Reveal delay={130} className="h-full">
           <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
