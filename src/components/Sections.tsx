@@ -5,7 +5,6 @@ import {
   projects,
   skillGroups,
   education,
-  previousEducation,
   certifications,
   interests,
 } from "../data/resume";
