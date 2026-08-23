@@ -208,8 +208,9 @@ export const skillGroups: SkillGroup[] = [
 export const previousEducation = {
   degree: "+2 / Higher Secondary Education",
   school: "Nightingle",
-  dates: "Previous Education",
-  results: "Completed",
+  dates: "2020 – 2021 ",
+  location: "Kupandole,Lalitpur",
+  results: "11: 3.43 GPA | 12: 3.25 GPA",
 };
 
 export const education = {
@@ -227,7 +228,7 @@ export const education = {
     "Web Development",
     "Database Systems",
   ],
-  gpa: "Completed",
+ 
 };
 
 export const certifications = [
@@ -237,13 +238,23 @@ export const certifications = [
     color: "acid",
   },
   {
-    name: "React.js & TypeScript",
-    issuer: "Technical Skills",
+    name: "Programming Foundations",
+    issuer: "JavaScript, HTML and CSS  / Coursera",
     color: "amber",
   },
   {
     name: "Email Marketing & Deliverability",
     issuer: "Professional",
+    color: "fog",
+  },
+   {
+    name: "Oracle Database Platform",
+    issuer: " Oracle ",
+    color: "fog",
+  },
+   {
+    name: "Google",
+    issuer: "  UI/UX Design",
     color: "fog",
   },
 ];
