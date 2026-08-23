@@ -205,39 +205,56 @@ export const skillGroups: SkillGroup[] = [
   },
 ];
 
+export const previousEducation = {
+  degree: "+2 / Higher Secondary Education",
+  school: "Nightingle",
+  dates: "Previous Education",
+  results: "Completed",
+};
+
 export const education = {
   degree: "BSc (Hons) Computer Science & Software Engineering",
   school: "University of Bedfordshire",
-  location: "Study location: PCPS College, Nepal",
-  dates: "Jan 2022 – Jan 2025",
-  courses: ["Web Development", "Operating Systems", "Data Structures", "Software Engineering"],
-
+  dates: "2021 — 2025",
+  location: "United Kingdom",
+  courses: [
+    "React.js",
+    "Python",
+    "Java",
+    "JavaScript",
+    "MySQL",
+    "Software Engineering",
+    "Web Development",
+    "Database Systems",
+  ],
+  gpa: "Completed",
 };
-export const previousEducation = {
-  degree: "+2",
-  school: "Nightingale International College",
-  dates: "2020 — 2021",
-  results: "Class 11: 3.43 GPA | Class 12: 3.25 GPA",
-};
 
-export interface Certification {
-  name: string;
-  issuer: string;
-  color: "acid" | "amber" | "fog";
-}
-
-export const certifications: Certification[] = [
-  { name: "Cisco CyberOps Associate", issuer: "Cisco", color: "amber" },
-  { name: "UI/UX Design & Usability Engineering", issuer: "Udemy", color: "fog" },
-  { name: "Google UX Design Certificate", issuer: "Google", color: "acid" },
-  { name: "Google Data Analytics Certificate", issuer: "Google", color: "acid" },
+export const certifications = [
+  {
+    name: "Frontend Web Development",
+    issuer: "Web Development",
+    color: "acid",
+  },
+  {
+    name: "React.js & TypeScript",
+    issuer: "Technical Skills",
+    color: "amber",
+  },
+  {
+    name: "Email Marketing & Deliverability",
+    issuer: "Professional",
+    color: "fog",
+  },
 ];
 
 export const interests = [
-  "Technology & Innovation",
-  "UI/UX & Frontend Craft",
-  "Community Involvement",
-  "Customer Service Solutions",
+  "Web Development",
+  "UI/UX Design",
+  "Email Marketing",
+  "Cloud & Automation",
+  "Artificial Intelligence",
+  "Mobile App Development",
 ];
 
 export const techTicker = [

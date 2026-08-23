@@ -390,36 +390,98 @@ export function EducationCerts() {
     amber: "border-amber/50 bg-amber/10 text-amber",
     fog: "border-line bg-panel2 text-fog",
   };
+
   return (
     <Shell id="education">
-      <SectionHead index="05" title="Education & Credentials" sub="git blame: origins" />
+      <SectionHead
+        index="05"
+        title="Education & Credentials"
+        sub="git blame: origins"
+      />
+
       <div className="grid gap-5 lg:grid-cols-2">
-        <Reveal delay={100} className="h-full">
-  <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
-    
-    <span className="mb-4 inline-flex w-fit border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
-      {previousEducation.dates}
-    </span>
 
-    <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">
-      {previousEducation.degree}
-    </h3>
+        {/* ================= LEFT — EDUCATION ================= */}
+        <Reveal className="h-full">
+          <div className="flex h-full flex-col gap-5">
 
-    <p className="mt-2 font-mono text-sm text-acid">
-      {previousEducation.school}
-    </p>
+            {/* MAIN EDUCATION */}
+            <div className="flex flex-1 flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
 
-    <div className="mt-5 border border-acid/30 bg-acid/5 px-4 py-3 font-mono text-xs text-acid">
-      <span className="text-fog">results:</span>{" "}
-      {previousEducation.results}
-    </div>
+              <span className="mb-4 inline-flex w-fit border border-acid/40 bg-acid/5 px-2.5 py-1 font-mono text-[11px] text-acid">
+                {education.dates}
+              </span>
 
-  </div>
-</Reveal>
+              <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">
+                {education.degree}
+              </h3>
 
+              <p className="mt-2 font-mono text-sm text-acid">
+                {education.school}
+              </p>
+
+              <p className="mt-1 text-sm text-fog">
+                {education.location}
+              </p>
+
+              <div className="mt-6">
+                <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-fog">
+                  Relevant Courses
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {education.courses.map((course) => (
+                    <span
+                      key={course}
+                      className="border border-line bg-ink/60 px-3 py-1.5 font-mono text-xs text-fog transition-all duration-200 hover:-translate-y-0.5 hover:border-acid hover:bg-acid hover:text-ink"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-auto pt-6">
+                <div className="border border-acid/30 bg-acid/5 px-4 py-3 font-mono text-xs text-acid">
+                  <span className="text-fog">gpa:</span>{" "}
+                  {education.gpa}
+                </div>
+              </div>
+            </div>
+
+            {/* PREVIOUS EDUCATION — +2 */}
+            <div className="flex flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
+
+              <span className="mb-4 inline-flex w-fit border border-line px-2.5 py-1 font-mono text-[11px] text-fog">
+                {previousEducation.dates}
+              </span>
+
+              <h3 className="font-display text-xl font-bold leading-snug md:text-2xl">
+                {previousEducation.degree}
+              </h3>
+
+              <p className="mt-2 font-mono text-sm text-acid">
+                {previousEducation.school}
+              </p>
+
+              <div className="mt-5 border border-line bg-ink/50 px-4 py-3 font-mono text-xs text-fog">
+                <span className="text-acid">status:</span>{" "}
+                {previousEducation.results}
+              </div>
+
+            </div>
+
+          </div>
+        </Reveal>
+
+        {/* ================= RIGHT — CERTIFICATIONS ================= */}
         <Reveal delay={130} className="h-full">
           <div className="flex h-full flex-col border border-line bg-panel/60 p-6 transition-colors duration-300 hover:border-acid/40 md:p-7">
-            <h3 className="font-display text-lg font-bold uppercase tracking-wide">Certifications</h3>
+
+            <h3 className="font-display text-lg font-bold uppercase tracking-wide">
+              Certifications
+            </h3>
+
             <ul className="mt-4 grow">
               {certifications.map((c, i) => (
                 <li
@@ -428,22 +490,34 @@ export function EducationCerts() {
                     i > 0 ? "border-t border-line/70" : ""
                   }`}
                 >
-                  <span className="text-[15px] text-snow/90">{c.name}</span>
+                  <span className="text-[15px] text-snow/90">
+                    {c.name}
+                  </span>
+
                   <span
-                    className={`shrink-0 border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${issuerColor[c.color]}`}
+                    className={`shrink-0 border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${
+                      issuerColor[c.color]
+                    }`}
                   >
                     {c.issuer}
                   </span>
                 </li>
               ))}
             </ul>
+
           </div>
         </Reveal>
+
       </div>
 
+      {/* ================= INTERESTS ================= */}
       <Reveal delay={220}>
         <div className="mt-5 flex flex-wrap items-center gap-3 border border-line bg-panel/40 px-5 py-4">
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-fog">interests:</span>
+
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-fog">
+            interests:
+          </span>
+
           {interests.map((it) => (
             <span
               key={it}
@@ -452,8 +526,10 @@ export function EducationCerts() {
               ✦ {it}
             </span>
           ))}
+
         </div>
       </Reveal>
+
     </Shell>
   );
 }
