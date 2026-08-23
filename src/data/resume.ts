@@ -218,6 +218,7 @@ export const education = {
   school: "University of Bedfordshire",
   dates: "2021 — 2025",
   location: "United Kingdom",
+  gpa: "Complated",
   courses: [
     "React.js",
     "Python",

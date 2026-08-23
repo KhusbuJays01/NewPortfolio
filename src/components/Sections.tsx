@@ -443,8 +443,8 @@ export function EducationCerts() {
 
               <div className="mt-auto pt-6">
                 <div className="border border-acid/30 bg-acid/5 px-4 py-3 font-mono text-xs text-acid">
-                  <span className="text-fog"></span>{" "}
-                  
+                  <span className="text-fog">gpa:Complated</span>{" "}
+                  {education.gpa}
                 </div>
               </div>
             </div>
