@@ -206,11 +206,18 @@ export const skillGroups: SkillGroup[] = [
 ];
 
 export const education = {
-  degree: "BSc (Hons) — Computer Science & Software Engineering",
-  school: "Patan College For Professional Studies, Kupondole Lalitpur",
-  dates: "Jan 2017 — Jun 2020",
+  degree: "BSc (Hons) Computer Science & Software Engineering",
+  school: "University of Bedfordshire",
+  location: "Study location: PCPS College, Nepal",
+  dates: "Jan 2022 – Jan 2025",
   courses: ["Web Development", "Operating Systems", "Data Structures", "Software Engineering"],
-  gpa: "3.1 / 3.5 GPA",
+  
+};
+export const previousEducation = {
+  degree: "+2 Management",
+  school: "Nightingale International College",
+  dates: "2020 — 2021",
+  results: "Class 11: 3.43 GPA | Class 12: 3.25 GPA",
 };
 
 export interface Certification {
