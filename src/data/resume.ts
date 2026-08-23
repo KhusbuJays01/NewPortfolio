@@ -238,13 +238,13 @@ export const certifications = [
     color: "acid",
   },
   {
-    name: "Programming Foundations",
-    issuer: "JavaScript, HTML and CSS / Coursera",
+    name: "JavaScript, HTML and CSS / Coursera",
+    issuer: " Programming Foundations",
     color: "amber",
   },
   {
-    name: "Professional",
-    issuer: "Email Marketing & Deliverability",
+    name: "Email Marketing & Deliverability",
+    issuer: "Professional",
     color: "fog",
   },
   {
