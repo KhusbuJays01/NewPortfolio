@@ -147,7 +147,7 @@ export function Preloader({ onDone }: { onDone: () => void }) {
             KHUSBU
               <br />
              <span className="text-acid">JAYSWAL</span>
-            <span className="caret" aria-hidden="true" />
+             <span className="caret" aria-hidden="true" />
           </h2>
 
           <div className="mt-6 h-1 w-full overflow-hidden bg-line">

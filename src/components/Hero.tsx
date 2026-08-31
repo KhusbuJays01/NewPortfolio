@@ -143,7 +143,7 @@ export function Hero() {
           {/* left — identity */}
           <div>
             <p className="font-mono text-sm text-fog">
-              <span className="text-acid">khushuj@portfolio</span>
+              <span className="text-acid">khusbuj@portfolio</span>
               <span className="text-fog">:~$</span>{" "}
               <span className="text-snow">{cmd.value}</span>
               {!cmd.done && <span className="caret" aria-hidden="true" />}
@@ -243,7 +243,7 @@ export function Hero() {
                 <span className="h-3 w-3 rounded-full bg-[#ff5f57]" aria-hidden="true" />
                 <span className="h-3 w-3 rounded-full bg-amber" aria-hidden="true" />
                 <span className="h-3 w-3 rounded-full bg-acid" aria-hidden="true" />
-                <span className="ml-3 font-mono text-[11px] text-fog">khushuj@portfolio: ~/dev</span>
+                <span className="ml-3 font-mono text-[11px] text-fog">khusbuj@portfolio: ~/dev</span>
               </div>
               <div className="p-5 font-mono text-[12.5px] leading-7 md:text-[13px]">
                 <p className="text-snow">
