@@ -8,18 +8,10 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
     d: 1150,
     jsx: (
       <>
-<h1
-  className="mt-5 font-display font-extrabold leading-[0.85] tracking-tight"
-  aria-label={profile.name}
->
-  <span className="block whitespace-nowrap text-[clamp(3.5rem,8.5vw,6.4rem)]">
-    KHUSBU
-  </span>
-
-  <span className="block whitespace-nowrap text-[clamp(3.5rem,8.5vw,6.4rem)]">
-    JAYSWAL
-  </span>
-</h1>
+        <span className="text-amber">const</span> <span className="text-snow">khusbu
+          
+        </span>
+        <span className="text-fog"> = {"{"}</span>
       </>
     ),
   },
