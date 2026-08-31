@@ -8,13 +8,16 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
     d: 1150,
     jsx: (
       <>
-       <h1 className="font-display font-extrabold tracking-tight leading-[0.85]">
-  <span className="block whitespace-nowrap text-[clamp(4rem,9vw,8rem)]">
-    KHUSBU
+<h1
+  className="mt-5 font-display font-extrabold leading-[0.85] tracking-tight"
+  aria-label={profile.name}
+>
+  <span className="block whitespace-nowrap text-[clamp(3.5rem,8.5vw,6.4rem)]">
+    {name.split(" ")[0]}
   </span>
 
-  <span className="block whitespace-nowrap text-[clamp(4rem,9vw,8rem)] text-acid">
-    JAYSWAL
+  <span className="block whitespace-nowrap text-[clamp(3.5rem,8.5vw,6.4rem)]">
+    {name.split(" ")[1]}
   </span>
 </h1>
       </>
