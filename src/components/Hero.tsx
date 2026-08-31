@@ -158,7 +158,11 @@ const ROLES = [
 ========================================================= */
 
 export function Hero() {
-  const name = useScramble(profile.name, true, 24);
+  const name = useScramble(
+    profile.name,
+    true,
+    24
+  );
 
   const cmd = useTyped(
     "whoami && cat profile.js",
@@ -174,7 +178,7 @@ export function Hero() {
   );
 
   /*
-   * Split:
+   * Name:
    *
    * KHUSBU
    * JAYSWAL
@@ -283,9 +287,7 @@ export function Hero() {
 
           <div>
 
-            {/* =================================================
-                TERMINAL
-            ================================================= */}
+            {/* TERMINAL */}
 
             <p className="font-mono text-sm text-fog">
 
@@ -310,7 +312,6 @@ export function Hero() {
 
             </p>
 
-
             {/* =================================================
                 NAME
             ================================================= */}
@@ -324,7 +325,7 @@ export function Hero() {
                 leading-[0.86]
                 tracking-tight
               "
-              aria-label={profile.name}
+              aria-label="KHUSBU JAYSWAL"
             >
 
               <span className="block whitespace-nowrap">
@@ -342,7 +343,6 @@ export function Hero() {
               </span>
 
             </h1>
-
 
             {/* =================================================
                 ROLE
@@ -387,10 +387,7 @@ export function Hero() {
 
             </Reveal>
 
-
-            {/* =================================================
-                DESCRIPTION
-            ================================================= */}
+            {/* DESCRIPTION */}
 
             <Reveal delay={320}>
 
@@ -407,10 +404,7 @@ export function Hero() {
 
             </Reveal>
 
-
-            {/* =================================================
-                BUTTONS
-            ================================================= */}
+            {/* BUTTONS */}
 
             <Reveal delay={440}>
 
@@ -423,8 +417,6 @@ export function Hero() {
                   gap-3
                 "
               >
-
-                {/* VIEW EXPERIENCE */}
 
                 <a
                   href="#experience"
@@ -460,9 +452,6 @@ export function Hero() {
 
                 </a>
 
-
-                {/* CONTACT */}
-
                 <a
                   href="#contact"
                   className="
@@ -495,7 +484,6 @@ export function Hero() {
 
             </Reveal>
 
-
             {/* =================================================
                 CONTACT / SOCIAL
             ================================================= */}
@@ -514,8 +502,6 @@ export function Hero() {
                   text-fog
                 "
               >
-
-                {/* EMAIL */}
 
                 <a
                   href={`mailto:${profile.email}`}
@@ -550,9 +536,6 @@ export function Hero() {
                   {profile.email}
 
                 </a>
-
-
-                {/* LOCATION */}
 
                 <span
                   className="
@@ -590,9 +573,6 @@ export function Hero() {
                   {profile.location}
 
                 </span>
-
-
-                {/* LANGUAGES */}
 
                 <span
                   className="
@@ -634,7 +614,6 @@ export function Hero() {
 
                 </span>
 
-
                 {/* GITHUB */}
 
                 <a
@@ -662,7 +641,6 @@ export function Hero() {
                   github/KhusbuJays01
 
                 </a>
-
 
                 {/* LINKEDIN */}
 
@@ -698,7 +676,6 @@ export function Hero() {
 
           </div>
 
-
           {/* =================================================
               RIGHT SIDE — PROFILE IMAGE
           ================================================= */}
@@ -716,9 +693,7 @@ export function Hero() {
               "
             >
 
-              {/* =================================================
-                  LARGE GREEN GLOW
-              ================================================= */}
+              {/* LARGE GREEN GLOW */}
 
               <div
                 className="
@@ -739,10 +714,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  OUTER DOTTED RING
-              ================================================= */}
+              {/* OUTER DOTTED RING */}
 
               <div
                 className="
@@ -760,10 +732,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  SECOND OUTER RING
-              ================================================= */}
+              {/* SECOND OUTER RING */}
 
               <div
                 className="
@@ -780,10 +749,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  MAIN GREEN / ORANGE RING
-              ================================================= */}
+              {/* MAIN GREEN / ORANGE RING */}
 
               <div
                 className="
@@ -807,10 +773,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  ROTATING GREEN RING
-              ================================================= */}
+              {/* ROTATING GREEN RING */}
 
               <div
                 className="
@@ -830,10 +793,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  ROTATING ORANGE RING
-              ================================================= */}
+              {/* ROTATING ORANGE RING */}
 
               <div
                 className="
@@ -853,10 +813,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  TOP ORBIT DOT
-              ================================================= */}
+              {/* TOP ORBIT DOT */}
 
               <span
                 className="
@@ -875,10 +832,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  LEFT ORBIT DOT
-              ================================================= */}
+              {/* LEFT ORBIT DOT */}
 
               <span
                 className="
@@ -895,10 +849,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  RIGHT ORBIT DOT
-              ================================================= */}
+              {/* RIGHT ORBIT DOT */}
 
               <span
                 className="
@@ -915,10 +866,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  SMALL ORANGE ORBIT DOT
-              ================================================= */}
+              {/* SMALL ORANGE ORBIT DOT */}
 
               <span
                 className="
@@ -935,10 +883,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  AVAILABLE BADGE
-              ================================================= */}
+              {/* AVAILABLE BADGE */}
 
               <div
                 className="
@@ -981,10 +926,7 @@ export function Hero() {
 
               </div>
 
-
-              {/* =================================================
-                  PROFILE IMAGE CONTAINER
-              ================================================= */}
+              {/* PROFILE IMAGE */}
 
               <div
                 className="
@@ -996,8 +938,6 @@ export function Hero() {
                   md:w-[380px]
                 "
               >
-
-                {/* IMAGE GLOW */}
 
                 <div
                   className="
@@ -1011,30 +951,22 @@ export function Hero() {
                   aria-hidden="true"
                 />
 
-
-                {/* =================================================
-                    IMAGE
-                ================================================= */}
-
                 <img
-  src={khusbuImage}
-  alt="Khusbu Jayswal"
-  className="
-    relative
-    z-10
-    h-full
-    w-full
-    rounded-full
-    border
-    border-acid/30
-    object-cover
-    object-center
-    drop-shadow-[0_20px_45px_rgba(0,0,0,0.70)]
-  "
-/>
-
-
-                {/* INNER WHITE BORDER */}
+                  src={khusbuImage}
+                  alt="Khusbu Jayswal"
+                  className="
+                    relative
+                    z-10
+                    h-full
+                    w-full
+                    rounded-full
+                    border
+                    border-acid/30
+                    object-cover
+                    object-center
+                    drop-shadow-[0_20px_45px_rgba(0,0,0,0.70)]
+                  "
+                />
 
                 <div
                   className="
@@ -1048,9 +980,6 @@ export function Hero() {
                   "
                   aria-hidden="true"
                 />
-
-
-                {/* GREEN OVERLAY */}
 
                 <div
                   className="
@@ -1069,10 +998,7 @@ export function Hero() {
 
               </div>
 
-
-              {/* =================================================
-                  FRONTEND.DEV BADGE
-              ================================================= */}
+              {/* FRONTEND BADGE */}
 
               <div
                 className="
@@ -1100,10 +1026,7 @@ export function Hero() {
                 frontend.dev
               </div>
 
-
-              {/* =================================================
-                  CODE ICON
-              ================================================= */}
+              {/* CODE ICON */}
 
               <div
                 className="
@@ -1135,10 +1058,7 @@ export function Hero() {
                 &lt;/&gt;
               </div>
 
-
-              {/* =================================================
-                  LIGHT BULB
-              ================================================= */}
+              {/* LIGHT BULB */}
 
               <div
                 className="
@@ -1167,10 +1087,7 @@ export function Hero() {
                 💡
               </div>
 
-
-              {/* =================================================
-                  ROCKET
-              ================================================= */}
+              {/* ROCKET */}
 
               <div
                 className="
@@ -1198,10 +1115,7 @@ export function Hero() {
                 🚀
               </div>
 
-
-              {/* =================================================
-                  ORANGE DECORATION LEFT
-              ================================================= */}
+              {/* ORANGE DECORATION */}
 
               <span
                 className="
@@ -1221,7 +1135,6 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
               <span
                 className="
                   absolute
@@ -1240,10 +1153,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  GREEN DECORATION RIGHT
-              ================================================= */}
+              {/* GREEN DECORATION */}
 
               <span
                 className="
@@ -1263,10 +1173,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  STARS
-              ================================================= */}
+              {/* STARS */}
 
               <span
                 className="
@@ -1283,7 +1190,6 @@ export function Hero() {
                 ✦
               </span>
 
-
               <span
                 className="
                   absolute
@@ -1299,10 +1205,7 @@ export function Hero() {
                 ✦
               </span>
 
-
-              {/* =================================================
-                  SMALL GREEN DOTS
-              ================================================= */}
+              {/* SMALL GREEN DOTS */}
 
               <span
                 className="
@@ -1319,7 +1222,6 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
               <span
                 className="
                   absolute
@@ -1335,10 +1237,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-
-              {/* =================================================
-                  PLUS
-              ================================================= */}
+              {/* PLUS */}
 
               <span
                 className="
@@ -1360,7 +1259,6 @@ export function Hero() {
           </Reveal>
 
         </div>
-
 
         {/* =====================================================
             STATS
@@ -1434,7 +1332,6 @@ export function Hero() {
         </Reveal>
 
       </div>
-
 
       {/* =====================================================
           TECH TICKER
