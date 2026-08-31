@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { profile, techTicker } from "../data/resume";
 import { useScramble, useTyped, useSpoken, Reveal } from "../lib/hooks";
 import { GitHubIcon, LinkedInIcon } from "./icons";
+import khusbuImage from "../assets/khusbu.jpg";
 
 const codeLines: { d: number; jsx: ReactNode }[] = [
   {
@@ -147,7 +148,7 @@ export function Hero() {
    *
    * on the left side.
    */
-  const nameParts = name.split(" ");
+  const nameParts = profile.name.split(" ");
 
   return (
     <section
@@ -215,21 +216,17 @@ export function Hero() {
             {/* ================= NAME ================= */}
 
             <h1
-              className="mt-5 font-display text-[clamp(2.9rem,8.5vw,6.4rem)] font-extrabold leading-[0.85] tracking-tight"
-              aria-label={profile.name}
-            >
-              {/* KHUSBU */}
+  className="mt-5 font-display text-[clamp(2.9rem,8.5vw,6.4rem)] font-extrabold leading-[0.85] tracking-tight"
+  aria-label={profile.name}
+>
+  <span className="block whitespace-nowrap">
+    {nameParts[0]}
+  </span>
 
-              <span className="block whitespace-nowrap">
-                {nameParts[0]}
-              </span>
-
-              {/* JAYSWAL */}
-
-              <span className="block whitespace-nowrap text-acid">
-                {nameParts[1]}
-              </span>
-            </h1>
+  <span className="block whitespace-nowrap text-acid">
+    {nameParts[1]}
+  </span>
+</h1>
 
             {/* ================= ROLE ================= */}
 
@@ -424,7 +421,7 @@ export function Hero() {
               {/* Image */}
 
               <img
-                src="/profile.png"
+                src={khusbuImage}
                 alt="Khusbu Jayswal"
                 className="h-auto w-full object-cover"
               />
