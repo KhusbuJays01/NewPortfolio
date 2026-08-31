@@ -1017,24 +1017,21 @@ export function Hero() {
                 ================================================= */}
 
                 <img
-                  src={khusbuImage}
-                  alt="Khusbu Jayswal"
-                  className="
-                    relative
-                    z-10
-                    h-full
-                    w-full
-                    rounded-full
-                    border
-                    border-acid/30
-                    object-cover
-                    object-center
-                    drop-shadow-[0_20px_45px_rgba(0,0,0,0.70)]
-                    transition-transform
-                    duration-700
-                    hover:scale-[1.03]
-                  "
-                />
+  src={khusbuImage}
+  alt="Khusbu Jayswal"
+  className="
+    relative
+    z-10
+    h-full
+    w-full
+    rounded-full
+    border
+    border-acid/30
+    object-cover
+    object-center
+    drop-shadow-[0_20px_45px_rgba(0,0,0,0.70)]
+  "
+/>
 
 
                 {/* INNER WHITE BORDER */}
