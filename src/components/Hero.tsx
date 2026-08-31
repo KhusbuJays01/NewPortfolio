@@ -317,32 +317,30 @@ export function Hero() {
             ================================================= */}
 
             <h1
-              className="
-                mt-5
-                font-display
-                text-[clamp(3.2rem,8vw,6.5rem)]
-                font-extrabold
-                leading-[0.86]
-                tracking-tight
-              "
-              aria-label="KHUSBU JAYSWAL"
-            >
+  className="
+    mt-5
+    font-display
+    text-[clamp(3.2rem,8vw,6.5rem)]
+    font-extrabold
+    leading-[0.86]
+    tracking-tight
+  "
+  aria-label={profile.name}
+>
+  <span className="block whitespace-nowrap">
+    {nameParts[0]}
+  </span>
 
-              <span className="block whitespace-nowrap">
-                {nameParts[0]}
-              </span>
-
-              <span
-                className="
-                  block
-                  whitespace-nowrap
-                  text-acid
-                "
-              >
-                {nameParts[1]}
-              </span>
-
-            </h1>
+  <span
+    className="
+      block
+      whitespace-nowrap
+      text-acid
+    "
+  >
+    {nameParts[1]}
+  </span>
+</h1>
 
             {/* =================================================
                 ROLE

@@ -5,7 +5,7 @@ import imgKiosk from "../assets/projects/kiosk.jpg";
 import imgTravel from "../assets/projects/travel.jpg";
 
 export const profile = {
-  name: "KHUBU JAISWAL",
+  name: "KHUSBU JAYSWAL",
   firstName: "Khusbu Jaiswal",
   role: "Team Lead",
   tagline: "Frontend & Web Development",
