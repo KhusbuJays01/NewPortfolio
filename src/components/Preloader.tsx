@@ -144,7 +144,7 @@ export function Preloader({ onDone }: { onDone: () => void }) {
           </div>
 
           <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight md:text-4xl">
-            KHUBU <span className="text-acid">JAISWAL</span>
+            KHUSBU <span className="text-acid">JAYSWAL</span>
             <span className="caret" aria-hidden="true" />
           </h1>
 

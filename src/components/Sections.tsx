@@ -186,7 +186,7 @@ function SpeakingCard() {
       </div>
 
       <div className="mt-4 border border-line/70 bg-ink/70 p-4">
-        <p className="font-mono text-[10px] text-fog">khushuj@portfolio:~$ ./speak.sh</p>
+        <p className="font-mono text-[10px] text-fog">khusbuj@portfolio:~$ ./speak.sh</p>
         <p className="mt-2 min-h-[70px] text-[15px] leading-relaxed text-snow/90">
           “{text}
           <span className="caret" aria-hidden="true" />”
