@@ -13,11 +13,11 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
   aria-label={profile.name}
 >
   <span className="block whitespace-nowrap text-[clamp(3.5rem,8.5vw,6.4rem)]">
-    {name.split(" ")[0]}
+    KHUSBU
   </span>
 
   <span className="block whitespace-nowrap text-[clamp(3.5rem,8.5vw,6.4rem)]">
-    {name.split(" ")[1]}
+    JAYSWAL
   </span>
 </h1>
       </>
