@@ -9,6 +9,10 @@ import {
 import { GitHubIcon, LinkedInIcon } from "./icons";
 import khusbuImage from "../assets/khusbu.png";
 
+/* =========================================================
+   CODE LINES
+========================================================= */
+
 const codeLines: { d: number; jsx: ReactNode }[] = [
   {
     d: 1150,
@@ -138,6 +142,10 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
   },
 ];
 
+/* =========================================================
+   ROLES
+========================================================= */
+
 const ROLES = [
   profile.tagline,
   "Email Marketing",
@@ -145,8 +153,13 @@ const ROLES = [
   "UI/UX & Product Thinking",
 ];
 
+/* =========================================================
+   HERO
+========================================================= */
+
 export function Hero() {
   const name = useScramble(profile.name, true, 24);
+
   const cmd = useTyped(
     "whoami && cat profile.js",
     true,
@@ -160,6 +173,12 @@ export function Hero() {
     13
   );
 
+  /*
+   * Split the name.
+   *
+   * KHUSBU
+   * JAYSWAL
+   */
   const nameParts = name.split(" ");
 
   return (
@@ -167,6 +186,7 @@ export function Hero() {
       id="top"
       className="relative overflow-hidden pt-32 pb-14 md:pt-40"
     >
+
       {/* =====================================================
           EXISTING PAGE BACKGROUND
           DO NOT CHANGE
@@ -200,17 +220,21 @@ export function Hero() {
       ===================================================== */}
 
       <div className="relative mx-auto w-full max-w-6xl px-5 md:px-8">
+
         <div className="grid items-center gap-14 lg:grid-cols-[7fr_5fr]">
 
           {/* =================================================
-              LEFT SIDE
+              LEFT SIDE — IDENTITY
           ================================================= */}
 
           <div>
 
-            {/* Terminal */}
+            {/* =================================================
+                TERMINAL COMMAND
+            ================================================= */}
 
             <p className="font-mono text-sm text-fog">
+
               <span className="text-acid">
                 khusbuj@portfolio
               </span>
@@ -229,16 +253,26 @@ export function Hero() {
                   aria-hidden="true"
                 />
               )}
+
             </p>
+
 
             {/* =================================================
                 NAME
             ================================================= */}
 
             <h1
-              className="mt-5 font-display text-[clamp(2.9rem,8.5vw,6.4rem)] font-extrabold leading-[0.85] tracking-tight"
+              className="
+                mt-5
+                font-display
+                text-[clamp(2.9rem,8.5vw,6.4rem)]
+                font-extrabold
+                leading-[0.85]
+                tracking-tight
+              "
               aria-label={profile.name}
             >
+
               <span className="block whitespace-nowrap">
                 {nameParts[0]}
               </span>
@@ -246,13 +280,16 @@ export function Hero() {
               <span className="block whitespace-nowrap text-acid">
                 {nameParts[1]}
               </span>
+
             </h1>
+
 
             {/* =================================================
                 ROLE
             ================================================= */}
 
             <Reveal delay={200}>
+
               <p className="mt-6 font-mono text-base md:text-xl">
 
                 <span className="text-fog">
@@ -273,63 +310,114 @@ export function Hero() {
                 </span>
 
               </p>
+
             </Reveal>
+
 
             {/* =================================================
                 DESCRIPTION
             ================================================= */}
 
             <Reveal delay={320}>
+
               <p className="mt-5 max-w-xl leading-relaxed text-fog">
                 {profile.short}
               </p>
+
             </Reveal>
+
 
             {/* =================================================
                 BUTTONS
             ================================================= */}
 
             <Reveal delay={440}>
+
               <div className="mt-8 flex flex-wrap items-center gap-3">
+
+                {/* VIEW EXPERIENCE */}
 
                 <a
                   href="#experience"
-                  className="group inline-flex items-center gap-2 bg-acid px-5 py-3 font-mono text-sm font-medium text-ink transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(93,240,138,0.45)]"
+                  className="
+                    group
+                    inline-flex
+                    items-center
+                    gap-2
+                    bg-acid
+                    px-5
+                    py-3
+                    font-mono
+                    text-sm
+                    font-medium
+                    text-ink
+                    transition-all
+                    duration-300
+                    hover:-translate-y-0.5
+                    hover:shadow-[0_8px_30px_-6px_rgba(93,240,138,0.45)]
+                  "
                 >
+
                   view experience
 
                   <span className="transition-transform duration-300 group-hover:translate-y-0.5">
                     ↓
                   </span>
+
                 </a>
+
+
+                {/* CONTACT */}
 
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 border border-line px-5 py-3 font-mono text-sm text-snow transition-all duration-300 hover:-translate-y-0.5 hover:border-acid/60 hover:text-acid"
+                  className="
+                    inline-flex
+                    items-center
+                    gap-2
+                    border
+                    border-line
+                    px-5
+                    py-3
+                    font-mono
+                    text-sm
+                    text-snow
+                    transition-all
+                    duration-300
+                    hover:-translate-y-0.5
+                    hover:border-acid/60
+                    hover:text-acid
+                  "
                 >
+
                   get in touch
 
                   <span aria-hidden="true">
                     →
                   </span>
+
                 </a>
 
               </div>
+
             </Reveal>
+
 
             {/* =================================================
                 CONTACT / SOCIAL
             ================================================= */}
 
             <Reveal delay={560}>
+
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-fog">
 
-                {/* Email */}
+                {/* EMAIL */}
 
                 <a
                   href={`mailto:${profile.email}`}
                   className="inline-flex items-center gap-2 transition-colors hover:text-acid"
                 >
+
                   <svg
                     className="h-3.5 w-3.5 text-acid"
                     viewBox="0 0 24 24"
@@ -338,6 +426,7 @@ export function Hero() {
                     strokeWidth="2"
                     aria-hidden="true"
                   >
+
                     <rect
                       x="2"
                       y="4"
@@ -347,12 +436,15 @@ export function Hero() {
                     />
 
                     <path d="m2 7 10 6 10-6" />
+
                   </svg>
 
                   {profile.email}
+
                 </a>
 
-                {/* Location */}
+
+                {/* LOCATION */}
 
                 <span className="inline-flex items-center gap-2">
 
@@ -364,6 +456,7 @@ export function Hero() {
                     strokeWidth="2"
                     aria-hidden="true"
                   >
+
                     <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z" />
 
                     <circle
@@ -371,13 +464,15 @@ export function Hero() {
                       cy="10"
                       r="2.5"
                     />
+
                   </svg>
 
                   {profile.location}
 
                 </span>
 
-                {/* Languages */}
+
+                {/* LANGUAGES */}
 
                 <span className="inline-flex items-center gap-2">
 
@@ -389,6 +484,7 @@ export function Hero() {
                     strokeWidth="2"
                     aria-hidden="true"
                   >
+
                     <circle
                       cx="12"
                       cy="12"
@@ -396,13 +492,15 @@ export function Hero() {
                     />
 
                     <path d="M3 12h18M12 3c2.5 2.6 3.9 5.7 3.9 9S14.5 18.4 12 21c-2.5-2.6-3.9-5.7-3.9-9S9.5 5.6 12 3Z" />
+
                   </svg>
 
                   {profile.languages.join(" · ")}
 
                 </span>
 
-                {/* GitHub */}
+
+                {/* GITHUB */}
 
                 <a
                   href={profile.github}
@@ -411,12 +509,15 @@ export function Hero() {
                   className="inline-flex items-center gap-2 transition-colors hover:text-acid"
                   title="GitHub"
                 >
+
                   <GitHubIcon className="h-3.5 w-3.5 text-acid" />
 
                   github/KhusbuJays01
+
                 </a>
 
-                {/* LinkedIn */}
+
+                {/* LINKEDIN */}
 
                 <a
                   href={profile.linkedin}
@@ -425,442 +526,626 @@ export function Hero() {
                   className="inline-flex items-center gap-2 transition-colors hover:text-acid"
                   title="LinkedIn"
                 >
+
                   <LinkedInIcon className="h-3.5 w-3.5 text-acid" />
 
                   in/khusbu-jayswal
+
                 </a>
 
               </div>
+
             </Reveal>
+
           </div>
 
+
           {/* =================================================
-             {/* =================================================
-    RIGHT SIDE — PROFILE IMAGE
-================================================= */}
+              RIGHT SIDE — ATTRACTIVE PROFILE IMAGE
+          ================================================= */}
 
-<Reveal delay={300}>
-  <div className="relative flex min-h-[430px] items-center justify-center md:min-h-[520px]">
+          <Reveal delay={300}>
 
-    {/* =============================================
-        SOFT GREEN GLOW
-    ============================================= */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        h-[300px] w-[300px]
-        rounded-full
-        opacity-30
-        blur-3xl
-        md:h-[410px] md:w-[410px]
-      "
-      style={{
-        background:
-          "radial-gradient(circle, rgba(93,240,138,0.45), transparent 68%)",
-      }}
-      aria-hidden="true"
-    />
+            <div className="
+              relative
+              flex
+              min-h-[430px]
+              items-center
+              justify-center
+              md:min-h-[520px]
+            ">
 
-    {/* =============================================
-        LARGE DOTTED OUTER RING
-    ============================================= */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        h-[360px] w-[360px]
-        rounded-full
-        border
-        border-dashed
-        border-acid/30
-        md:h-[470px] md:w-[470px]
-      "
-      aria-hidden="true"
-    />
 
-    {/* =============================================
-        GREEN / ORANGE MAIN RING
-    ============================================= */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        h-[330px] w-[330px]
-        rounded-full
-        border-[3px]
-        border-acid/80
-        shadow-[0_0_25px_rgba(93,240,138,0.55),0_0_60px_rgba(93,240,138,0.20)]
-        md:h-[430px] md:w-[430px]
-      "
-      style={{
-        borderRightColor: "rgba(255,180,84,0.9)",
-        borderBottomColor: "rgba(255,180,84,0.75)",
-      }}
-      aria-hidden="true"
-    />
+              {/* =============================================
+                  SOFT GREEN GLOW
+              ============================================= */}
 
-    {/* =============================================
-        ROTATING TECH RING
-    ============================================= */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        h-[350px] w-[350px]
-        animate-[spin_18s_linear_infinite]
-        rounded-full
-        border
-        border-acid/40
-        border-t-transparent
-        border-l-transparent
-        md:h-[450px] md:w-[450px]
-      "
-      aria-hidden="true"
-    />
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  h-[300px]
+                  w-[300px]
+                  rounded-full
+                  opacity-30
+                  blur-3xl
+                  md:h-[410px]
+                  md:w-[410px]
+                "
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(93,240,138,0.45), transparent 68%)",
+                }}
+                aria-hidden="true"
+              />
 
-    {/* =============================================
-        SECOND ROTATING RING
-    ============================================= */}
-    <div
-      className="
-        pointer-events-none
-        absolute
-        h-[375px] w-[375px]
-        animate-[spin_25s_linear_infinite_reverse]
-        rounded-full
-        border
-        border-amber/30
-        border-r-transparent
-        border-b-transparent
-        md:h-[475px] md:w-[475px]
-      "
-      aria-hidden="true"
-    />
 
-    {/* =============================================
-        TOP ORBIT DOT
-    ============================================= */}
-    <span
-      className="
-        absolute
-        left-1/2
-        top-[15px]
-        z-20
-        h-3
-        w-3
-        -translate-x-1/2
-        rounded-full
-        bg-acid
-        shadow-[0_0_20px_rgba(93,240,138,1)]
-        md:top-[20px]
-      "
-      aria-hidden="true"
-    />
+              {/* =============================================
+                  OUTER DOTTED RING
+              ============================================= */}
 
-    {/* =============================================
-        RIGHT ORBIT DOT
-    ============================================= */}
-    <span
-      className="
-        absolute
-        right-[4%]
-        top-[50%]
-        z-20
-        h-3
-        w-3
-        rounded-full
-        bg-acid
-        shadow-[0_0_18px_rgba(93,240,138,1)]
-      "
-      aria-hidden="true"
-    />
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  h-[360px]
+                  w-[360px]
+                  rounded-full
+                  border
+                  border-dashed
+                  border-acid/30
+                  md:h-[470px]
+                  md:w-[470px]
+                "
+                aria-hidden="true"
+              />
 
-    {/* =============================================
-        LEFT ORBIT DOT
-    ============================================= */}
-    <span
-      className="
-        absolute
-        left-[4%]
-        top-[38%]
-        z-20
-        h-2.5
-        w-2.5
-        rounded-full
-        bg-acid
-        shadow-[0_0_18px_rgba(93,240,138,1)]
-      "
-      aria-hidden="true"
-    />
 
-    {/* =============================================
-        ORANGE ORBIT DOT
-    ============================================= */}
-    <span
-      className="
-        absolute
-        bottom-[18%]
-        left-[17%]
-        z-20
-        h-3
-        w-3
-        rounded-full
-        bg-amber
-        shadow-[0_0_18px_rgba(255,180,84,0.9)]
-      "
-      aria-hidden="true"
-    />
+              {/* =============================================
+                  MAIN GREEN + ORANGE RING
+              ============================================= */}
 
-    {/* =============================================
-        PROFILE IMAGE
-        IMPORTANT:
-        khusbu.png should have transparent background
-    ============================================= */}
-    <div
-      className="
-        relative
-        z-10
-        flex
-        h-[290px]
-        w-[290px]
-        items-end
-        justify-center
-        md:h-[370px]
-        md:w-[370px]
-      "
-    >
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  h-[330px]
+                  w-[330px]
+                  rounded-full
+                  border-[3px]
+                  border-acid/80
+                  shadow-[0_0_25px_rgba(93,240,138,0.55),0_0_60px_rgba(93,240,138,0.20)]
+                  md:h-[430px]
+                  md:w-[430px]
+                "
+                style={{
+                  borderRightColor:
+                    "rgba(255,180,84,0.9)",
+                  borderBottomColor:
+                    "rgba(255,180,84,0.75)",
+                }}
+                aria-hidden="true"
+              />
 
-      {/* Inner circular glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          inset-[10px]
-          rounded-full
-          bg-acid/5
-          shadow-[inset_0_0_35px_rgba(93,240,138,0.18)]
-        "
-        aria-hidden="true"
-      />
 
-      {/* Person */}
-      <img
-        src={khusbuImage}
-        alt="Khusbu Jayswal"
-        className="
-          relative
-          z-10
-          h-full
-          w-full
-          object-contain
-          object-bottom
-          drop-shadow-[0_15px_35px_rgba(0,0,0,0.65)]
-          transition-transform
-          duration-700
-          hover:scale-[1.03]
-        "
-      />
+              {/* =============================================
+                  ROTATING GREEN RING
+              ============================================= */}
 
-      {/* Subtle bottom glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          bottom-0
-          left-1/2
-          z-0
-          h-20
-          w-48
-          -translate-x-1/2
-          rounded-full
-          bg-acid/20
-          blur-2xl
-        "
-        aria-hidden="true"
-      />
-    </div>
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  h-[350px]
+                  w-[350px]
+                  animate-[spin_18s_linear_infinite]
+                  rounded-full
+                  border
+                  border-acid/40
+                  border-t-transparent
+                  border-l-transparent
+                  md:h-[450px]
+                  md:w-[450px]
+                "
+                aria-hidden="true"
+              />
 
-    {/* =============================================
-        CODE ICON
-    ============================================= */}
-    <div
-      className="
-        absolute
-        left-[3%]
-        top-[18%]
-        z-30
-        flex
-        h-12
-        w-12
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-acid/60
-        bg-ink/80
-        font-mono
-        text-lg
-        text-acid
-        shadow-[0_0_20px_rgba(93,240,138,0.15)]
-        backdrop-blur-sm
-        md:left-[7%]
-        md:h-14
-        md:w-14
-      "
-      aria-hidden="true"
-    >
-      &lt;/&gt;
-    </div>
 
-    {/* =============================================
-        LIGHTBULB ICON
-    ============================================= */}
-    <div
-      className="
-        absolute
-        right-[4%]
-        top-[15%]
-        z-30
-        flex
-        h-12
-        w-12
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-amber/70
-        bg-ink/80
-        text-xl
-        shadow-[0_0_20px_rgba(255,180,84,0.15)]
-        backdrop-blur-sm
-        md:right-[8%]
-        md:h-14
-        md:w-14
-      "
-      aria-hidden="true"
-    >
-      💡
-    </div>
+              {/* =============================================
+                  ROTATING ORANGE RING
+              ============================================= */}
 
-    {/* =============================================
-        ROCKET ICON
-    ============================================= */}
-    <div
-      className="
-        absolute
-        bottom-[13%]
-        right-[9%]
-        z-30
-        flex
-        h-12
-        w-12
-        items-center
-        justify-center
-        rounded-full
-        border
-        border-acid/60
-        bg-ink/80
-        text-xl
-        shadow-[0_0_20px_rgba(93,240,138,0.15)]
-        backdrop-blur-sm
-        md:h-14
-        md:w-14
-      "
-      aria-hidden="true"
-    >
-      🚀
-    </div>
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  h-[375px]
+                  w-[375px]
+                  animate-[spin_25s_linear_infinite_reverse]
+                  rounded-full
+                  border
+                  border-amber/30
+                  border-r-transparent
+                  border-b-transparent
+                  md:h-[475px]
+                  md:w-[475px]
+                "
+                aria-hidden="true"
+              />
 
-    {/* =============================================
-        SMALL ORANGE DECORATION
-    ============================================= */}
-    <span
-      className="
-        absolute
-        left-[10%]
-        top-[27%]
-        h-12
-        w-2
-        rotate-[25deg]
-        rounded-full
-        bg-amber
-        opacity-80
-        shadow-[0_0_15px_rgba(255,180,84,0.4)]
-        md:h-16
-      "
-      aria-hidden="true"
-    />
 
-    {/* =============================================
-        SMALL GREEN DECORATION
-    ============================================= */}
-    <span
-      className="
-        absolute
-        right-[5%]
-        top-[40%]
-        h-16
-        w-3
-        rotate-[45deg]
-        rounded-full
-        bg-acid
-        opacity-80
-        shadow-[0_0_20px_rgba(93,240,138,0.45)]
-        md:h-20
-      "
-      aria-hidden="true"
-    />
+              {/* =============================================
+                  TOP ORBIT DOT
+              ============================================= */}
 
-    {/* =============================================
-        SMALL PLUS MARKS
-    ============================================= */}
-    <span
-      className="absolute left-[17%] top-[24%] z-30 font-mono text-lg text-acid"
-      aria-hidden="true"
-    >
-      ✦
-    </span>
+              <span
+                className="
+                  absolute
+                  left-1/2
+                  top-[15px]
+                  z-20
+                  h-3
+                  w-3
+                  -translate-x-1/2
+                  rounded-full
+                  bg-acid
+                  shadow-[0_0_20px_rgba(93,240,138,1)]
+                  md:top-[20px]
+                "
+                aria-hidden="true"
+              />
 
-    <span
-      className="absolute right-[17%] top-[32%] z-30 font-mono text-lg text-acid"
-      aria-hidden="true"
-    >
-      ✦
-    </span>
 
-    <span
-      className="absolute bottom-[22%] left-[12%] z-30 font-mono text-sm text-acid"
-      aria-hidden="true"
-    >
-      +
-    </span>
+              {/* =============================================
+                  RIGHT ORBIT DOT
+              ============================================= */}
 
-  </div>
-</Reveal>
+              <span
+                className="
+                  absolute
+                  right-[4%]
+                  top-[50%]
+                  z-20
+                  h-3
+                  w-3
+                  rounded-full
+                  bg-acid
+                  shadow-[0_0_18px_rgba(93,240,138,1)]
+                "
+                aria-hidden="true"
+              />
+
+
+              {/* =============================================
+                  LEFT ORBIT DOT
+              ============================================= */}
+
+              <span
+                className="
+                  absolute
+                  left-[4%]
+                  top-[38%]
+                  z-20
+                  h-2.5
+                  w-2.5
+                  rounded-full
+                  bg-acid
+                  shadow-[0_0_18px_rgba(93,240,138,1)]
+                "
+                aria-hidden="true"
+              />
+
+
+              {/* =============================================
+                  ORANGE ORBIT DOT
+              ============================================= */}
+
+              <span
+                className="
+                  absolute
+                  bottom-[18%]
+                  left-[17%]
+                  z-20
+                  h-3
+                  w-3
+                  rounded-full
+                  bg-amber
+                  shadow-[0_0_18px_rgba(255,180,84,0.9)]
+                "
+                aria-hidden="true"
+              />
+
+
+              {/* =============================================
+                  PROFILE IMAGE
+              ============================================= */}
+
+              <div
+                className="
+                  relative
+                  z-10
+                  flex
+                  h-[290px]
+                  w-[290px]
+                  items-end
+                  justify-center
+                  md:h-[370px]
+                  md:w-[370px]
+                "
+              >
+
+                {/* Inner circular glow */}
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    inset-[10px]
+                    rounded-full
+                    bg-acid/5
+                    shadow-[inset_0_0_35px_rgba(93,240,138,0.18)]
+                  "
+                  aria-hidden="true"
+                />
+
+
+                {/* PERSON */}
+
+                <img
+                  src={khusbuImage}
+                  alt="Khusbu Jayswal"
+                  className="
+                    relative
+                    z-10
+                    h-full
+                    w-full
+                    object-contain
+                    object-bottom
+                    drop-shadow-[0_15px_35px_rgba(0,0,0,0.65)]
+                    transition-transform
+                    duration-700
+                    hover:scale-[1.03]
+                  "
+                />
+
+
+                {/* Bottom glow */}
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    bottom-0
+                    left-1/2
+                    z-0
+                    h-20
+                    w-48
+                    -translate-x-1/2
+                    rounded-full
+                    bg-acid/20
+                    blur-2xl
+                  "
+                  aria-hidden="true"
+                />
+
+              </div>
+
+
+              {/* =============================================
+                  CODE ICON
+              ============================================= */}
+
+              <div
+                className="
+                  absolute
+                  left-[3%]
+                  top-[18%]
+                  z-30
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-acid/60
+                  bg-ink/80
+                  font-mono
+                  text-lg
+                  text-acid
+                  shadow-[0_0_20px_rgba(93,240,138,0.15)]
+                  backdrop-blur-sm
+                  md:left-[7%]
+                  md:h-14
+                  md:w-14
+                "
+                aria-hidden="true"
+              >
+                &lt;/&gt;
+              </div>
+
+
+              {/* =============================================
+                  LIGHT BULB
+              ============================================= */}
+
+              <div
+                className="
+                  absolute
+                  right-[4%]
+                  top-[15%]
+                  z-30
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-amber/70
+                  bg-ink/80
+                  text-xl
+                  shadow-[0_0_20px_rgba(255,180,84,0.15)]
+                  backdrop-blur-sm
+                  md:right-[8%]
+                  md:h-14
+                  md:w-14
+                "
+                aria-hidden="true"
+              >
+                💡
+              </div>
+
+
+              {/* =============================================
+                  ROCKET
+              ============================================= */}
+
+              <div
+                className="
+                  absolute
+                  bottom-[13%]
+                  right-[9%]
+                  z-30
+                  flex
+                  h-12
+                  w-12
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-acid/60
+                  bg-ink/80
+                  text-xl
+                  shadow-[0_0_20px_rgba(93,240,138,0.15)]
+                  backdrop-blur-sm
+                  md:h-14
+                  md:w-14
+                "
+                aria-hidden="true"
+              >
+                🚀
+              </div>
+
+
+              {/* =============================================
+                  ORANGE DECORATION
+              ============================================= */}
+
+              <span
+                className="
+                  absolute
+                  left-[10%]
+                  top-[27%]
+                  h-12
+                  w-2
+                  rotate-[25deg]
+                  rounded-full
+                  bg-amber
+                  opacity-80
+                  shadow-[0_0_15px_rgba(255,180,84,0.4)]
+                  md:h-16
+                "
+                aria-hidden="true"
+              />
+
+
+              {/* =============================================
+                  GREEN DECORATION
+              ============================================= */}
+
+              <span
+                className="
+                  absolute
+                  right-[5%]
+                  top-[40%]
+                  h-16
+                  w-3
+                  rotate-[45deg]
+                  rounded-full
+                  bg-acid
+                  opacity-80
+                  shadow-[0_0_20px_rgba(93,240,138,0.45)]
+                  md:h-20
+                "
+                aria-hidden="true"
+              />
+
+
+              {/* =============================================
+                  STAR MARKS
+              ============================================= */}
+
+              <span
+                className="
+                  absolute
+                  left-[17%]
+                  top-[24%]
+                  z-30
+                  font-mono
+                  text-lg
+                  text-acid
+                "
+                aria-hidden="true"
+              >
+                ✦
+              </span>
+
+
+              <span
+                className="
+                  absolute
+                  right-[17%]
+                  top-[32%]
+                  z-30
+                  font-mono
+                  text-lg
+                  text-acid
+                "
+                aria-hidden="true"
+              >
+                ✦
+              </span>
+
+
+              {/* PLUS */}
+
+              <span
+                className="
+                  absolute
+                  bottom-[22%]
+                  left-[12%]
+                  z-30
+                  font-mono
+                  text-sm
+                  text-acid
+                "
+                aria-hidden="true"
+              >
+                +
+              </span>
+
+            </div>
+
+          </Reveal>
+
+        </div>
+
+
+        {/* =====================================================
+            STATS STRIP
+        ===================================================== */}
+
+        <Reveal delay={200}>
+
+          <div className="
+            mt-16
+            grid
+            grid-cols-2
+            gap-px
+            overflow-hidden
+            border
+            border-line
+            bg-line
+            md:grid-cols-4
+          ">
+
+            {profile.stats.map((s) => (
+
+              <div
+                key={s.label}
+                className="
+                  group
+                  bg-ink/90
+                  p-5
+                  transition-colors
+                  duration-300
+                  hover:bg-panel
+                  md:p-6
+                "
+              >
+
+                <p
+                  className="
+                    font-display
+                    text-3xl
+                    font-extrabold
+                    text-acid
+                    transition-transform
+                    duration-300
+                    group-hover:-translate-y-0.5
+                    md:text-4xl
+                  "
+                >
+                  {s.value}
+                </p>
+
+                <p
+                  className="
+                    mt-1.5
+                    font-mono
+                    text-[11px]
+                    uppercase
+                    tracking-[0.18em]
+                    text-fog
+                  "
+                >
+                  {s.label}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </Reveal>
+
       </div>
+
 
       {/* =====================================================
           TECH TICKER
       ===================================================== */}
 
       <div
-        className="marquee relative mt-16 overflow-hidden border-y border-line bg-panel/40 py-3.5"
+        className="
+          marquee
+          relative
+          mt-16
+          overflow-hidden
+          border-y
+          border-line
+          bg-panel/40
+          py-3.5
+        "
         aria-hidden="true"
       >
 
         <div className="marquee-track flex w-max">
 
           {[0, 1].map((copy) => (
+
             <div
               key={copy}
               className="flex shrink-0"
             >
 
               {techTicker.map((t) => (
+
                 <span
                   key={`${copy}-${t}`}
-                  className="flex items-center gap-3 pr-10 font-mono text-xs uppercase tracking-[0.22em] text-fog"
+                  className="
+                    flex
+                    items-center
+                    gap-3
+                    pr-10
+                    font-mono
+                    text-xs
+                    uppercase
+                    tracking-[0.22em]
+                    text-fog
+                  "
                 >
 
                   <span className="text-acid">
@@ -870,9 +1155,11 @@ export function Hero() {
                   {t}
 
                 </span>
+
               ))}
 
             </div>
+
           ))}
 
         </div>
