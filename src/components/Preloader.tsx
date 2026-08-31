@@ -143,12 +143,12 @@ export function Preloader({ onDone }: { onDone: () => void }) {
             <span className="text-acid">{pct}%</span>
           </div>
 
-          <h3 className="mt-4 font-display text-3xl font-extrabold tracking-tight md:text-4xl">
+          <h1 className="mt-4 font-display text-3xl font-extrabold tracking-tight md:text-4xl">
             KHUSBU
               <br />
              <span className="text-acid">JAYSWAL</span>
              <span className="caret" aria-hidden="true" />
-          </h3>
+          </h1>
 
           <div className="mt-6 h-1 w-full overflow-hidden bg-line">
             <div
