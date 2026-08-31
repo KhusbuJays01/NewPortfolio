@@ -7,7 +7,7 @@ import {
   Reveal,
 } from "../lib/hooks";
 import { GitHubIcon, LinkedInIcon } from "./icons";
-import khusbuImage from "../assets/khusbu.png";
+import khusbuImage from "../assets/khusbu-hero.png";
 
 /* =========================================================
    CODE LINES
@@ -540,494 +540,517 @@ export function Hero() {
           </div>
 
 
-          {/* =================================================
-              RIGHT SIDE — ATTRACTIVE PROFILE IMAGE
-          ================================================= */}
-
-          <Reveal delay={300}>
-
-            <div className="
-              relative
-              flex
-              min-h-[430px]
-              items-center
-              justify-center
-              md:min-h-[520px]
-            ">
-
-
-              {/* =============================================
-                  SOFT GREEN GLOW
-              ============================================= */}
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  h-[300px]
-                  w-[300px]
-                  rounded-full
-                  opacity-30
-                  blur-3xl
-                  md:h-[410px]
-                  md:w-[410px]
-                "
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(93,240,138,0.45), transparent 68%)",
-                }}
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  OUTER DOTTED RING
-              ============================================= */}
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  h-[360px]
-                  w-[360px]
-                  rounded-full
-                  border
-                  border-dashed
-                  border-acid/30
-                  md:h-[470px]
-                  md:w-[470px]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  MAIN GREEN + ORANGE RING
-              ============================================= */}
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  h-[330px]
-                  w-[330px]
-                  rounded-full
-                  border-[3px]
-                  border-acid/80
-                  shadow-[0_0_25px_rgba(93,240,138,0.55),0_0_60px_rgba(93,240,138,0.20)]
-                  md:h-[430px]
-                  md:w-[430px]
-                "
-                style={{
-                  borderRightColor:
-                    "rgba(255,180,84,0.9)",
-                  borderBottomColor:
-                    "rgba(255,180,84,0.75)",
-                }}
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  ROTATING GREEN RING
-              ============================================= */}
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  h-[350px]
-                  w-[350px]
-                  animate-[spin_18s_linear_infinite]
-                  rounded-full
-                  border
-                  border-acid/40
-                  border-t-transparent
-                  border-l-transparent
-                  md:h-[450px]
-                  md:w-[450px]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  ROTATING ORANGE RING
-              ============================================= */}
-
-              <div
-                className="
-                  pointer-events-none
-                  absolute
-                  h-[375px]
-                  w-[375px]
-                  animate-[spin_25s_linear_infinite_reverse]
-                  rounded-full
-                  border
-                  border-amber/30
-                  border-r-transparent
-                  border-b-transparent
-                  md:h-[475px]
-                  md:w-[475px]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  TOP ORBIT DOT
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  left-1/2
-                  top-[15px]
-                  z-20
-                  h-3
-                  w-3
-                  -translate-x-1/2
-                  rounded-full
-                  bg-acid
-                  shadow-[0_0_20px_rgba(93,240,138,1)]
-                  md:top-[20px]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  RIGHT ORBIT DOT
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  right-[4%]
-                  top-[50%]
-                  z-20
-                  h-3
-                  w-3
-                  rounded-full
-                  bg-acid
-                  shadow-[0_0_18px_rgba(93,240,138,1)]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  LEFT ORBIT DOT
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  left-[4%]
-                  top-[38%]
-                  z-20
-                  h-2.5
-                  w-2.5
-                  rounded-full
-                  bg-acid
-                  shadow-[0_0_18px_rgba(93,240,138,1)]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  ORANGE ORBIT DOT
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  bottom-[18%]
-                  left-[17%]
-                  z-20
-                  h-3
-                  w-3
-                  rounded-full
-                  bg-amber
-                  shadow-[0_0_18px_rgba(255,180,84,0.9)]
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  PROFILE IMAGE
-              ============================================= */}
-
-              <div
-                className="
-                  relative
-                  z-10
-                  flex
-                  h-[290px]
-                  w-[290px]
-                  items-end
-                  justify-center
-                  md:h-[370px]
-                  md:w-[370px]
-                "
-              >
-
-                {/* Inner circular glow */}
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    inset-[10px]
-                    rounded-full
-                    bg-acid/5
-                    shadow-[inset_0_0_35px_rgba(93,240,138,0.18)]
-                  "
-                  aria-hidden="true"
-                />
-
-
-                {/* PERSON */}
-
-                <img
-                  src={khusbuImage}
-                  alt="Khusbu Jayswal"
-                  className="
-                    relative
-                    z-10
-                    h-full
-                    w-full
-                    object-contain
-                    object-bottom
-                    drop-shadow-[0_15px_35px_rgba(0,0,0,0.65)]
-                    transition-transform
-                    duration-700
-                    hover:scale-[1.03]
-                  "
-                />
-
-
-                {/* Bottom glow */}
-
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    bottom-0
-                    left-1/2
-                    z-0
-                    h-20
-                    w-48
-                    -translate-x-1/2
-                    rounded-full
-                    bg-acid/20
-                    blur-2xl
-                  "
-                  aria-hidden="true"
-                />
-
-              </div>
-
-
-              {/* =============================================
-                  CODE ICON
-              ============================================= */}
-
-              <div
-                className="
-                  absolute
-                  left-[3%]
-                  top-[18%]
-                  z-30
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-acid/60
-                  bg-ink/80
-                  font-mono
-                  text-lg
-                  text-acid
-                  shadow-[0_0_20px_rgba(93,240,138,0.15)]
-                  backdrop-blur-sm
-                  md:left-[7%]
-                  md:h-14
-                  md:w-14
-                "
-                aria-hidden="true"
-              >
-                &lt;/&gt;
-              </div>
-
-
-              {/* =============================================
-                  LIGHT BULB
-              ============================================= */}
-
-              <div
-                className="
-                  absolute
-                  right-[4%]
-                  top-[15%]
-                  z-30
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-amber/70
-                  bg-ink/80
-                  text-xl
-                  shadow-[0_0_20px_rgba(255,180,84,0.15)]
-                  backdrop-blur-sm
-                  md:right-[8%]
-                  md:h-14
-                  md:w-14
-                "
-                aria-hidden="true"
-              >
-                💡
-              </div>
-
-
-              {/* =============================================
-                  ROCKET
-              ============================================= */}
-
-              <div
-                className="
-                  absolute
-                  bottom-[13%]
-                  right-[9%]
-                  z-30
-                  flex
-                  h-12
-                  w-12
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-acid/60
-                  bg-ink/80
-                  text-xl
-                  shadow-[0_0_20px_rgba(93,240,138,0.15)]
-                  backdrop-blur-sm
-                  md:h-14
-                  md:w-14
-                "
-                aria-hidden="true"
-              >
-                🚀
-              </div>
-
-
-              {/* =============================================
-                  ORANGE DECORATION
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  left-[10%]
-                  top-[27%]
-                  h-12
-                  w-2
-                  rotate-[25deg]
-                  rounded-full
-                  bg-amber
-                  opacity-80
-                  shadow-[0_0_15px_rgba(255,180,84,0.4)]
-                  md:h-16
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  GREEN DECORATION
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  right-[5%]
-                  top-[40%]
-                  h-16
-                  w-3
-                  rotate-[45deg]
-                  rounded-full
-                  bg-acid
-                  opacity-80
-                  shadow-[0_0_20px_rgba(93,240,138,0.45)]
-                  md:h-20
-                "
-                aria-hidden="true"
-              />
-
-
-              {/* =============================================
-                  STAR MARKS
-              ============================================= */}
-
-              <span
-                className="
-                  absolute
-                  left-[17%]
-                  top-[24%]
-                  z-30
-                  font-mono
-                  text-lg
-                  text-acid
-                "
-                aria-hidden="true"
-              >
-                ✦
-              </span>
-
-
-              <span
-                className="
-                  absolute
-                  right-[17%]
-                  top-[32%]
-                  z-30
-                  font-mono
-                  text-lg
-                  text-acid
-                "
-                aria-hidden="true"
-              >
-                ✦
-              </span>
-
-
-              {/* PLUS */}
-
-              <span
-                className="
-                  absolute
-                  bottom-[22%]
-                  left-[12%]
-                  z-30
-                  font-mono
-                  text-sm
-                  text-acid
-                "
-                aria-hidden="true"
-              >
-                +
-              </span>
-
-            </div>
-
-          </Reveal>
+         {/* =================================================
+    RIGHT SIDE — PROFILE IMAGE DESIGN
+================================================= */}
+
+<Reveal delay={300}>
+  <div
+    className="
+      relative
+      flex
+      min-h-[430px]
+      items-center
+      justify-center
+      md:min-h-[520px]
+    "
+  >
+
+    {/* =============================================
+        BACKGROUND GLOW
+    ============================================= */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        h-[300px]
+        w-[300px]
+        rounded-full
+        opacity-40
+        blur-3xl
+        md:h-[430px]
+        md:w-[430px]
+      "
+      style={{
+        background:
+          "radial-gradient(circle, rgba(93,240,138,0.30), transparent 68%)",
+      }}
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        OUTER DOTTED CIRCLE
+    ============================================= */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        h-[350px]
+        w-[350px]
+        rounded-full
+        border
+        border-dashed
+        border-acid/30
+        md:h-[465px]
+        md:w-[465px]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        MAIN GREEN / ORANGE CIRCLE
+    ============================================= */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        h-[330px]
+        w-[330px]
+        rounded-full
+        border-[3px]
+        border-acid
+        shadow-[0_0_20px_rgba(93,240,138,0.7),0_0_50px_rgba(93,240,138,0.25)]
+        md:h-[425px]
+        md:w-[425px]
+      "
+      style={{
+        borderRightColor: "rgba(255,180,84,1)",
+        borderBottomColor: "rgba(255,180,84,0.9)",
+      }}
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        ROTATING GREEN RING
+    ============================================= */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        h-[355px]
+        w-[355px]
+        animate-[spin_18s_linear_infinite]
+        rounded-full
+        border
+        border-acid/50
+        border-t-transparent
+        border-l-transparent
+        md:h-[450px]
+        md:w-[450px]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        ROTATING ORANGE RING
+    ============================================= */}
+
+    <div
+      className="
+        pointer-events-none
+        absolute
+        h-[375px]
+        w-[375px]
+        animate-[spin_25s_linear_infinite_reverse]
+        rounded-full
+        border
+        border-amber/40
+        border-r-transparent
+        border-b-transparent
+        md:h-[475px]
+        md:w-[475px]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        TOP DOT
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        left-1/2
+        top-[30px]
+        z-30
+        h-3
+        w-3
+        -translate-x-1/2
+        rounded-full
+        bg-acid
+        shadow-[0_0_20px_rgba(93,240,138,1)]
+        md:top-[20px]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        LEFT DOT
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        left-[7%]
+        top-[48%]
+        z-30
+        h-3
+        w-3
+        rounded-full
+        bg-amber
+        shadow-[0_0_18px_rgba(255,180,84,0.9)]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        RIGHT DOT
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        right-[6%]
+        top-[43%]
+        z-30
+        h-3
+        w-3
+        rounded-full
+        bg-acid
+        shadow-[0_0_18px_rgba(93,240,138,1)]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        PROFILE IMAGE
+    ============================================= */}
+
+    <div
+      className="
+        relative
+        z-10
+        h-[300px]
+        w-[300px]
+        md:h-[375px]
+        md:w-[375px]
+      "
+    >
+
+      {/* Image glow */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-5
+          rounded-full
+          bg-acid/10
+          shadow-[inset_0_0_45px_rgba(93,240,138,0.30)]
+        "
+        aria-hidden="true"
+      />
+
+      {/* =========================================
+          FACE / PROFILE IMAGE
+      ========================================= */}
+
+      <img
+        src={khusbuImage}
+        alt="Khusbu Jayswal"
+        className="
+          relative
+          z-10
+          h-full
+          w-full
+          rounded-full
+          object-cover
+          object-center
+          drop-shadow-[0_20px_40px_rgba(0,0,0,0.65)]
+          transition-transform
+          duration-700
+          hover:scale-[1.03]
+        "
+      />
+
+      {/* Inner border */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-2
+          z-20
+          rounded-full
+          border
+          border-white/20
+        "
+        aria-hidden="true"
+      />
+
+      {/* Green image overlay */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          z-20
+          rounded-full
+          bg-gradient-to-t
+          from-ink/25
+          via-transparent
+          to-acid/5
+        "
+        aria-hidden="true"
+      />
+    </div>
+
+    {/* =============================================
+        CODE ICON
+    ============================================= */}
+
+    <div
+      className="
+        absolute
+        left-[4%]
+        top-[16%]
+        z-40
+        flex
+        h-12
+        w-12
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-acid/70
+        bg-ink/90
+        font-mono
+        text-lg
+        font-bold
+        text-acid
+        shadow-[0_0_25px_rgba(93,240,138,0.25)]
+        backdrop-blur-sm
+        md:left-[8%]
+        md:h-14
+        md:w-14
+      "
+      aria-hidden="true"
+    >
+      &lt;/&gt;
+    </div>
+
+    {/* =============================================
+        LIGHT BULB
+    ============================================= */}
+
+    <div
+      className="
+        absolute
+        right-[4%]
+        top-[13%]
+        z-40
+        flex
+        h-12
+        w-12
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-amber/70
+        bg-ink/90
+        text-xl
+        shadow-[0_0_25px_rgba(255,180,84,0.25)]
+        backdrop-blur-sm
+        md:right-[8%]
+        md:h-14
+        md:w-14
+      "
+      aria-hidden="true"
+    >
+      💡
+    </div>
+
+    {/* =============================================
+        ROCKET
+    ============================================= */}
+
+    <div
+      className="
+        absolute
+        bottom-[14%]
+        right-[8%]
+        z-40
+        flex
+        h-12
+        w-12
+        items-center
+        justify-center
+        rounded-full
+        border
+        border-acid/70
+        bg-ink/90
+        text-xl
+        shadow-[0_0_25px_rgba(93,240,138,0.25)]
+        backdrop-blur-sm
+        md:h-14
+        md:w-14
+      "
+      aria-hidden="true"
+    >
+      🚀
+    </div>
+
+    {/* =============================================
+        ORANGE DECORATION LEFT
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        left-[8%]
+        top-[28%]
+        z-20
+        h-12
+        w-2
+        rotate-[25deg]
+        rounded-full
+        bg-amber
+        shadow-[0_0_18px_rgba(255,180,84,0.5)]
+        md:h-16
+      "
+      aria-hidden="true"
+    />
+
+    <span
+      className="
+        absolute
+        left-[13%]
+        bottom-[22%]
+        z-20
+        h-10
+        w-2
+        rotate-[35deg]
+        rounded-full
+        bg-amber
+        shadow-[0_0_18px_rgba(255,180,84,0.5)]
+        md:h-14
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        GREEN DECORATION RIGHT
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        right-[5%]
+        top-[38%]
+        z-20
+        h-16
+        w-3
+        rotate-[45deg]
+        rounded-full
+        bg-acid
+        shadow-[0_0_22px_rgba(93,240,138,0.55)]
+        md:h-20
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        STARS
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        left-[17%]
+        top-[23%]
+        z-40
+        text-lg
+        text-acid
+      "
+      aria-hidden="true"
+    >
+      ✦
+    </span>
+
+    <span
+      className="
+        absolute
+        right-[16%]
+        top-[28%]
+        z-40
+        text-lg
+        text-acid
+      "
+      aria-hidden="true"
+    >
+      ✦
+    </span>
+
+    {/* =============================================
+        SMALL GREEN DOTS
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        left-[10%]
+        top-[61%]
+        z-30
+        h-2
+        w-2
+        rounded-full
+        bg-acid
+        shadow-[0_0_12px_rgba(93,240,138,1)]
+      "
+      aria-hidden="true"
+    />
+
+    <span
+      className="
+        absolute
+        right-[12%]
+        top-[63%]
+        z-30
+        h-2
+        w-2
+        rounded-full
+        bg-acid
+        shadow-[0_0_12px_rgba(93,240,138,1)]
+      "
+      aria-hidden="true"
+    />
+
+    {/* =============================================
+        PLUS
+    ============================================= */}
+
+    <span
+      className="
+        absolute
+        bottom-[20%]
+        left-[15%]
+        z-40
+        font-mono
+        text-sm
+        text-acid
+      "
+      aria-hidden="true"
+    >
+      +
+    </span>
+
+  </div>
+</Reveal>
 
         </div>
 
