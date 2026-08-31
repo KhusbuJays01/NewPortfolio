@@ -1,6 +1,11 @@
 import type { ReactNode } from "react";
 import { profile, techTicker } from "../data/resume";
-import { useScramble, useTyped, useSpoken, Reveal } from "../lib/hooks";
+import {
+  useScramble,
+  useTyped,
+  useSpoken,
+  Reveal,
+} from "../lib/hooks";
 import { GitHubIcon, LinkedInIcon } from "./icons";
 import khusbuImage from "../assets/khusbu.jpg";
 
@@ -72,7 +77,9 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
       <>
         <span className="text-acid"> focus</span>
         <span className="text-fog">: </span>
-        <span className="text-snow">'clean UI + solid delivery'</span>
+        <span className="text-snow">
+          'clean UI + solid delivery'
+        </span>
         <span className="text-fog">,</span>
       </>
     ),
@@ -93,7 +100,9 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
       <>
         <span className="text-fog">    </span>
         <span className="text-amber">return</span>{" "}
-        <span className="text-snow">'on time, on brand ✨'</span>
+        <span className="text-snow">
+          'on time, on brand ✨'
+        </span>
         <span className="text-fog">;</span>
       </>
     ),
@@ -121,7 +130,9 @@ const codeLines: { d: number; jsx: ReactNode }[] = [
     jsx: (
       <>
         <span className="text-fog">→ </span>
-        <span className="text-snow">'on time, on brand ✨'</span>
+        <span className="text-snow">
+          'on time, on brand ✨'
+        </span>
       </>
     ),
   },
@@ -136,26 +147,30 @@ const ROLES = [
 
 export function Hero() {
   const name = useScramble(profile.name, true, 24);
-  const cmd = useTyped("whoami && cat profile.js", true, 46);
-  const role = useSpoken(ROLES, 32, 1900, 13);
+  const cmd = useTyped(
+    "whoami && cat profile.js",
+    true,
+    46
+  );
 
-  /*
-   * Split the name into first and last name.
-   * This displays:
-   *
-   * KHUSBU
-   * JAYSWAL
-   *
-   * on the left side.
-   */
-  const nameParts = profile.name.split(" ");
+  const role = useSpoken(
+    ROLES,
+    32,
+    1900,
+    13
+  );
+
+  const nameParts = name.split(" ");
 
   return (
     <section
       id="top"
       className="relative overflow-hidden pt-32 pb-14 md:pt-40"
     >
-      {/* ================= AMBIENT BACKGROUND ================= */}
+      {/* =====================================================
+          EXISTING PAGE BACKGROUND
+          DO NOT CHANGE
+      ===================================================== */}
 
       <div
         className="bg-grid pointer-events-none absolute inset-0"
@@ -180,17 +195,20 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      {/* ================= MAIN CONTAINER ================= */}
+      {/* =====================================================
+          MAIN CONTAINER
+      ===================================================== */}
 
       <div className="relative mx-auto w-full max-w-6xl px-5 md:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-[7fr_5fr]">
 
-          {/* ==================================================
-              LEFT SIDE — IDENTITY
-          ================================================== */}
+          {/* =================================================
+              LEFT SIDE
+          ================================================= */}
 
           <div>
-            {/* Terminal command */}
+
+            {/* Terminal */}
 
             <p className="font-mono text-sm text-fog">
               <span className="text-acid">
@@ -213,25 +231,30 @@ export function Hero() {
               )}
             </p>
 
-            {/* ================= NAME ================= */}
+            {/* =================================================
+                NAME
+            ================================================= */}
 
             <h1
-  className="mt-5 font-display text-[clamp(2.9rem,8.5vw,6.4rem)] font-extrabold leading-[0.85] tracking-tight"
-  aria-label={profile.name}
->
-  <span className="block whitespace-nowrap">
-    {nameParts[0]}
-  </span>
+              className="mt-5 font-display text-[clamp(2.9rem,8.5vw,6.4rem)] font-extrabold leading-[0.85] tracking-tight"
+              aria-label={profile.name}
+            >
+              <span className="block whitespace-nowrap">
+                {nameParts[0]}
+              </span>
 
-  <span className="block whitespace-nowrap text-acid">
-    {nameParts[1]}
-  </span>
-</h1>
+              <span className="block whitespace-nowrap text-acid">
+                {nameParts[1]}
+              </span>
+            </h1>
 
-            {/* ================= ROLE ================= */}
+            {/* =================================================
+                ROLE
+            ================================================= */}
 
             <Reveal delay={200}>
               <p className="mt-6 font-mono text-base md:text-xl">
+
                 <span className="text-fog">
                   $ role ={" "}
                 </span>
@@ -248,10 +271,13 @@ export function Hero() {
                 <span className="ml-4 text-sm text-fog">
                   · {profile.location}
                 </span>
+
               </p>
             </Reveal>
 
-            {/* ================= DESCRIPTION ================= */}
+            {/* =================================================
+                DESCRIPTION
+            ================================================= */}
 
             <Reveal delay={320}>
               <p className="mt-5 max-w-xl leading-relaxed text-fog">
@@ -259,7 +285,9 @@ export function Hero() {
               </p>
             </Reveal>
 
-            {/* ================= BUTTONS ================= */}
+            {/* =================================================
+                BUTTONS
+            ================================================= */}
 
             <Reveal delay={440}>
               <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -289,7 +317,9 @@ export function Hero() {
               </div>
             </Reveal>
 
-            {/* ================= CONTACT / SOCIAL ================= */}
+            {/* =================================================
+                CONTACT / SOCIAL
+            ================================================= */}
 
             <Reveal delay={560}>
               <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-fog">
@@ -404,36 +434,215 @@ export function Hero() {
             </Reveal>
           </div>
 
-          {/* ==================================================
-              RIGHT SIDE — PROFILE IMAGE
-          ================================================== */}
+          {/* =================================================
+              RIGHT SIDE — ATTRACTIVE PROFILE IMAGE
+          ================================================= */}
 
           <Reveal delay={300}>
-            <div className="relative overflow-hidden border border-line bg-panel/90 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
+            <div className="relative flex min-h-[420px] items-center justify-center md:min-h-[500px]">
 
-              {/* Top glowing line */}
+              {/* =============================================
+                  OUTER SOFT GLOW
+              ============================================= */}
 
-              <span
-                className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-acid/70 to-transparent"
+              <div
+                className="absolute h-[330px] w-[330px] rounded-full opacity-30 blur-3xl md:h-[410px] md:w-[410px]"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(93,240,138,0.35), transparent 65%)",
+                }}
                 aria-hidden="true"
               />
 
-              {/* Image */}
+              {/* =============================================
+                  OUTER DOTTED RING
+              ============================================= */}
 
-              <img
-                src={khusbuImage}
-                alt="Khusbu Jayswal"
-                className="h-auto w-full object-cover"
+              <div
+                className="absolute h-[370px] w-[370px] rounded-full border border-dashed border-acid/30 md:h-[460px] md:w-[460px]"
+                aria-hidden="true"
               />
+
+              {/* =============================================
+                  ROTATING RING
+              ============================================= */}
+
+              <div
+                className="absolute h-[350px] w-[350px] animate-[spin_18s_linear_infinite] rounded-full border border-acid/50 border-t-transparent border-r-transparent md:h-[440px] md:w-[440px]"
+                aria-hidden="true"
+              />
+
+              {/* =============================================
+                  SECOND ROTATING RING
+              ============================================= */}
+
+              <div
+                className="absolute h-[325px] w-[325px] animate-[spin_12s_linear_infinite_reverse] rounded-full border border-amber/30 border-b-transparent border-l-transparent md:h-[410px] md:w-[410px]"
+                aria-hidden="true"
+              />
+
+              {/* =============================================
+                  TOP ORBIT DOT
+              ============================================= */}
+
+              <span
+                className="absolute left-1/2 top-[15px] h-3 w-3 -translate-x-1/2 rounded-full bg-acid shadow-[0_0_18px_rgba(93,240,138,0.9)] md:top-[25px]"
+                aria-hidden="true"
+              />
+
+              {/* =============================================
+                  RIGHT ORBIT DOT
+              ============================================= */}
+
+              <span
+                className="absolute right-[5%] top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-acid shadow-[0_0_15px_rgba(93,240,138,0.8)]"
+                aria-hidden="true"
+              />
+
+              {/* =============================================
+                  LEFT ORBIT DOT
+              ============================================= */}
+
+              <span
+                className="absolute left-[5%] top-[38%] h-2 w-2 rounded-full bg-acid shadow-[0_0_15px_rgba(93,240,138,0.8)]"
+                aria-hidden="true"
+              />
+
+              {/* =============================================
+                  IMAGE CONTAINER
+              ============================================= */}
+
+              <div
+                className="
+                  relative
+                  z-10
+                  h-[290px]
+                  w-[290px]
+                  overflow-hidden
+                  rounded-full
+                  border
+                  border-acid/60
+                  bg-panel
+                  shadow-[0_0_60px_rgba(93,240,138,0.18)]
+                  md:h-[370px]
+                  md:w-[370px]
+                "
+              >
+
+                {/* Inner border */}
+
+                <div
+                  className="pointer-events-none absolute inset-2 z-20 rounded-full border border-white/10"
+                  aria-hidden="true"
+                />
+
+                {/* Profile image */}
+
+                <img
+                  src={khusbuImage}
+                  alt="Khusbu Jayswal"
+                  className="
+                    h-full
+                    w-full
+                    object-cover
+                    object-center
+                    transition-transform
+                    duration-700
+                    hover:scale-105
+                  "
+                />
+
+                {/* Image overlay */}
+
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/20 via-transparent to-acid/5"
+                  aria-hidden="true"
+                />
+
+              </div>
+
+              {/* =============================================
+                  SMALL TECH LABEL — TOP LEFT
+              ============================================= */}
+
+              <div
+                className="
+                  absolute
+                  left-[3%]
+                  top-[12%]
+                  z-20
+                  hidden
+                  border
+                  border-line
+                  bg-ink/80
+                  px-3
+                  py-2
+                  font-mono
+                  text-[10px]
+                  uppercase
+                  tracking-[0.18em]
+                  text-fog
+                  backdrop-blur-sm
+                  md:block
+                "
+              >
+                <span className="text-acid">●</span>{" "}
+                available
+              </div>
+
+              {/* =============================================
+                  SMALL TECH LABEL — BOTTOM RIGHT
+              ============================================= */}
+
+              <div
+                className="
+                  absolute
+                  bottom-[12%]
+                  right-[3%]
+                  z-20
+                  hidden
+                  border
+                  border-line
+                  bg-ink/80
+                  px-3
+                  py-2
+                  font-mono
+                  text-[10px]
+                  uppercase
+                  tracking-[0.18em]
+                  text-fog
+                  backdrop-blur-sm
+                  md:block
+                "
+              >
+                frontend.dev
+              </div>
+
+              {/* =============================================
+                  CORNER PLUS MARKS
+              ============================================= */}
+
+              <span
+                className="absolute left-[14%] top-[25%] font-mono text-xs text-acid opacity-70"
+                aria-hidden="true"
+              >
+                +
+              </span>
+
+              <span
+                className="absolute bottom-[25%] right-[13%] font-mono text-xs text-acid opacity-70"
+                aria-hidden="true"
+              >
+                +
+              </span>
 
             </div>
           </Reveal>
-
         </div>
 
-        {/* ==================================================
+        {/* =====================================================
             STATS STRIP
-        ================================================== */}
+        ===================================================== */}
 
         <Reveal delay={200}>
           <div className="mt-16 grid grid-cols-2 gap-px overflow-hidden border border-line bg-line md:grid-cols-4">
@@ -457,12 +666,11 @@ export function Hero() {
 
           </div>
         </Reveal>
-
       </div>
 
-      {/* ==================================================
+      {/* =====================================================
           TECH TICKER
-      ================================================== */}
+      ===================================================== */}
 
       <div
         className="marquee relative mt-16 overflow-hidden border-y border-line bg-panel/40 py-3.5"
